@@ -18,6 +18,8 @@
     --spacing-600: 48px;
     --spacing-700: 56px;
     --spacing-800: 64px;
+    --spacing-900: 72px;
+    --spacing-1000: 80px;
 
     --white: #ffffff;
     --black: #000000;
@@ -116,42 +118,6 @@ html {
     font-family: "Overpass", sans-serif;
 }
 
-/* TODO: attribution at end needs to change, maybe
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-} */
-
-/* TODO: dropdown menus
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content div {
-    padding: 10px 14px;
-    cursor: default;
-    /* Since it's just text
-}
-
-.dropdown-content div:hover {
-    background-color: #f1f1f1;
-}
-
-/* Show dropdown when button is clicked
-.dropdown-btn:focus+.dropdown-content,
-.dropdown-content:hover {
-    display: block;
-} */
-
 .btn {
     cursor: pointer;
     width: 137px;
@@ -184,7 +150,32 @@ html {
     background-color: transparent;
 }
 
-#header-div {
+/* TODO: dropdown menus */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    padding: 10px 14px;
+    cursor: default;
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown when button is clicked */
+.dropdown-btn:focus+.dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+#header-container {
     background-image:
         url('./images/bg-pattern-intro-desktop.svg'),
         linear-gradient(to right, #FF8F71, #FF3E55);
@@ -199,7 +190,7 @@ html {
     justify-content: center;
     text-align: center;
     border-bottom-left-radius: 50px;
-    /* padding-bottom: 59px; */
+    padding-bottom: 59px;
 }
 
 #header-content {
@@ -245,9 +236,55 @@ html {
     gap: var(--spacing-600);
 }
 
-#btn-div {
+#header-btns-div {
     display: flex;
     gap: var(--spacing-200);
+}
+
+#top-section-container {
+    width: 100%;
+    height: 882px;
+    position: absolute;
+    top: 671px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-items: space-between;
+    padding-top: var(--spacing-1000, 0);
+    /* fallback 0 if not defined */
+    padding-right: var(--spacing-0, 0);
+    padding-bottom: var(--spacing-1000, 0);
+    padding-left: var(--spacing-0, 0);
+}
+
+#top-section-header {
+    align-self: center;
+}
+#top-section-content {
+    display: flex;
+    position: absolute;
+    top: 71px;
+}
+
+#top-section-text-container {
+    width: 750px;
+    height: 882px;
+    display: flex;
+    align-items: center;
+}
+
+#top-section-text-content {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 150px;
+    gap: var(--spacing-800);
+}
+
+#top-section-image-container {
+    width: 690px;
+    height: 882px;
 }
 
 #footer-div {
@@ -266,4 +303,14 @@ html {
     /* align-items: center; */
     justify-content: space-between;
     /* text-align: center; */
+}
+
+/* TODO: attribution at end needs to change, maybe */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
