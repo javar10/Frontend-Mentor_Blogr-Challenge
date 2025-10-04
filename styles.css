@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "Overpass";
+    src: url("assets/Overpass-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url(assets/Ubuntu-Regular.ttf) format("truetype");
+}
+
+:root {
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-700: 56px;
+    --spacing-800: 64px;
+
+    --white: #ffffff;
+    --black: #000000;
+    --gray950: #24242c;
+    --gray600: #4c5862;
+    --gray550: #878d92;
+    --gray100: #e7e7e7;
+    --purple950: #2d2e40;
+    --purple900: #3e4062;
+    --purple800: #52526f;
+    --red500: #ff505c;
+    --red400: #ff7b86;
+    --red50: #f9f6f6;
+    --blue900: #1f3e5a;
+    --gradient1-left: #2d2e40;
+    --gradient1-right: #3f4164;
+    --gradient2-left: #ff8f71;
+    --gradient2-right: #ff3e55;
+
+}
+
+.text1 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: var(--white);
+}
+
+.text2 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 1.25;
+    letter-spacing: -1.2px;
+    color: var(--blue900);
+}
+
+.text3 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: 0px;
+    color: var(--blue900);
+}
+
+.text4 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 0px;
+    color: var(--white);
+}
+
+.text5 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.6px;
+    color: var(--gray600);
+}
+
+.text6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.15;
+    letter-spacing: 0px;
+    color: var(--white);
+}
+
+.text7 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 0px;
+    color: var(--white);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Overpass", sans-serif;
+}
+
+/* TODO: attribution at end needs to change, maybe
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+} */
+
+/* TODO: dropdown menus
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    padding: 10px 14px;
+    cursor: default;
+    /* Since it's just text
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown when button is clicked
+.dropdown-btn:focus+.dropdown-content,
+.dropdown-content:hover {
+    display: block;
+} */
+
+.btn {
+    cursor: pointer;
+    width: 137px;
+    height: 48px;
+    border: 1px solid var(--white);
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: var(--white);
+    color: var(--red500);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.dropdown {
+    display: flex;
+    gap: var(--spacing-100);
+}
+
+.dropbtn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+#header-div {
+    background-image:
+        url('./images/bg-pattern-intro-desktop.svg'),
+        linear-gradient(to right, #FF8F71, #FF3E55);
+    background-size: 225%;
+    background-position: 27.5% 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    /* padding-bottom: 59px; */
+}
+
+#header-content {
+    width: 1112px;
+    height: 385px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header-top {
+    width: 1112px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-top-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-800);
+}
+
+#dropdown-div {
+    display: flex;
+    gap: var(--spacing-400);
+}
+
+#header-top-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-400);
+}
+
+#header-bottom {
+    /* width: 920px; */
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-600);
+}
+
+#btn-div {
+    display: flex;
+    gap: var(--spacing-200);
+}
+
+#footer-div {
+    background: #24242C;
+    height: 359px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-top-right-radius: 50px;
+}
+
+.footer-content {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* text-align: center; */
+}
