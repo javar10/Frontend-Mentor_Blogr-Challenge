@@ -111,6 +111,10 @@
     color: var(--white);
 }
 
+.text-white {
+    color: var(--white);
+}
+
 body,
 html {
     margin: 0;
@@ -248,10 +252,8 @@ html {
     top: 671px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-items: space-between;
     padding-top: var(--spacing-1000, 0);
-    /* fallback 0 if not defined */
     padding-right: var(--spacing-0, 0);
     padding-bottom: var(--spacing-1000, 0);
     padding-left: var(--spacing-0, 0);
@@ -260,6 +262,7 @@ html {
 #top-section-header {
     align-self: center;
 }
+
 #top-section-content {
     display: flex;
     position: absolute;
@@ -285,6 +288,47 @@ html {
 #top-section-image-container {
     width: 690px;
     height: 882px;
+}
+
+#mid-section-container {
+    width: 1440px;
+    height: 499px;
+    position: relative;
+    top: 970px;
+    display: flex;
+    justify-content: center;
+}
+
+#mid-section-bg {
+    background-image: 
+    url('./images/bg-pattern-circles.svg'),
+    linear-gradient(to right, var(--gradient1-left), var(--gradient1-right));
+    background-size: 70%, cover;
+    background-position: -210px 82%, center;
+    background-repeat: no-repeat, no-repeat;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 49.5px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+#mid-section-content {
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: -30px;
+}
+#phone-test {
+    padding: 0;
+    margin: 0;
+}
+#mid-section-phones-img {
+    position: relative;
+    left: -45px;
 }
 
 #footer-div {
