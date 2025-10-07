@@ -300,9 +300,9 @@ html {
 }
 
 #mid-section-bg {
-    background-image: 
-    url('./images/bg-pattern-circles.svg'),
-    linear-gradient(to right, var(--gradient1-left), var(--gradient1-right));
+    background-image:
+        url('./images/bg-pattern-circles.svg'),
+        linear-gradient(to right, var(--gradient1-left), var(--gradient1-right));
     background-size: 70%, cover;
     background-position: -210px 82%, center;
     background-repeat: no-repeat, no-repeat;
@@ -322,13 +322,35 @@ html {
     position: absolute;
     top: -30px;
 }
-#phone-test {
-    padding: 0;
-    margin: 0;
-}
+
 #mid-section-phones-img {
     position: relative;
     left: -45px;
+}
+
+#bottom-section-container {
+    width: 1275px;
+    position: absolute;
+    top: 2126px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bottom-section-img-div {
+    overflow: hidden;
+    width: 600px;
+}
+
+#bottom-section-laptop-img {
+    transform: translateX(-280px);
+}
+
+#bottom-section-text {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-800);
 }
 
 #footer-div {
