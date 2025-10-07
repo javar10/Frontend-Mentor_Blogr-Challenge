@@ -143,42 +143,6 @@ html {
     color: var(--white);
 }
 
-.dropdown {
-    display: flex;
-    gap: var(--spacing-100);
-}
-
-.dropbtn {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-}
-
-/* TODO: dropdown menus */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content div {
-    padding: 10px 14px;
-    cursor: default;
-}
-
-.dropdown-content div:hover {
-    background-color: #f1f1f1;
-}
-
-/* Show dropdown when button is clicked */
-.dropdown-btn:focus+.dropdown-content,
-.dropdown-content:hover {
-    display: block;
-}
-
 #header-container {
     background-image:
         url('./images/bg-pattern-intro-desktop.svg'),
@@ -225,6 +189,46 @@ html {
     gap: var(--spacing-400);
 }
 
+.dropdown {
+    display: flex;
+    gap: var(--spacing-100);
+    /* position: relative; */
+}
+
+.dropbtn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+/* TODO: dropdown menus */
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--white);
+    width: 148px;
+    position: absolute;
+    min-height: 147px;
+    transform: translate(-12px, 48px);
+    z-index: 1;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 12px 0px 12px 20px;
+    color: var(--purple950);
+}
+
+.dropdown-content div {
+    cursor: pointer;
+}
+
+.login-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    opacity: 75%;
+}
+  
 #header-top-right {
     display: flex;
     align-items: center;
@@ -232,9 +236,7 @@ html {
 }
 
 #header-bottom {
-    /* width: 920px; */
     display: flex;
-    /* justify-content: space-between; */
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-600);
@@ -395,7 +397,6 @@ html {
     opacity: 75%;
 }
 
-/* TODO: attribution at end needs to change, maybe */
 #attribution {
     text-align: center;
     position: absolute;

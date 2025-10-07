@@ -1,15 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const button = document.querySelector(".dropdown-btn");
-    const menu = document.querySelector(".dropdown-content");
+const dropdownsBtns = document.querySelectorAll('.dropbtn');
 
-    button.addEventListener("click", function (event) {
-        event.stopPropagation();   // Prevent click from reaching document
-        menu.classList.toggle("show");
+dropdownsBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const menu = btn.nextElementSibling;
+
+    // Close all menus first
+    document.querySelectorAll('.dropdown-content').forEach((d) => {
+      if (d !== menu) d.style.display = 'none';
     });
 
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function () {
-        menu.classList.remove("show");
-    });
+    // Toggle the clicked menu
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  });
 });
 
+// Optional: close if clicking outside
+window.addEventListener('click', (e) => {
+  if (![...dropdownsBtns].some(btn => btn.contains(e.target))) {
+    document.querySelectorAll('.dropdown-content').forEach(d => d.style.display = 'none');
+  }
+});
