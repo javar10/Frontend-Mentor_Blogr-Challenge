@@ -404,6 +404,11 @@ html {
     opacity: 75%;
 }
 
+.footer-list div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #attribution {
     text-align: center;
     position: absolute;
