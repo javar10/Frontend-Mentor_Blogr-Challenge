@@ -200,6 +200,7 @@ html {
     border: none;
     background-color: transparent;
 }
+
 /* TODO: dropdown menus */
 .dropdown-content {
     display: none;
@@ -222,13 +223,18 @@ html {
     cursor: pointer;
 }
 
+.dropdown-content div:hover {
+    color: var(--purple950);
+    font-weight: 700;
+}
+
 .login-btn {
     cursor: pointer;
     border: none;
     background-color: transparent;
     opacity: 75%;
 }
-  
+
 #header-top-right {
     display: flex;
     align-items: center;
@@ -375,11 +381,12 @@ html {
     align-items: flex-start;
     justify-content: space-between;
 }
+
 .footer-list-container h6 {
     margin-top: 0;
-  }
+}
 
-#footer-text-container{
+#footer-text-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

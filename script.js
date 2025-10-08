@@ -8,7 +8,7 @@ dropdownsBtns.forEach((btn) => {
     const arrow = btn.querySelector('img');
     const isOpen = menu.style.display === 'flex';
 
-    // Close all other dropdowns and reset their arrows + opacity
+    // Close all other dropdowns and reset arrows + opacity
     document.querySelectorAll('.dropdown-content').forEach((d) => {
       if (d !== menu) {
         d.style.display = 'none';
@@ -17,26 +17,22 @@ dropdownsBtns.forEach((btn) => {
       }
     });
 
-    // If the clicked menu was open, close it and reset all buttons
+    // If this dropdown was open, close it and reset opacity
     if (isOpen) {
       menu.style.display = 'none';
       arrow.style.transform = 'rotate(0deg)';
       dropdownsBtns.forEach((b) => (b.style.opacity = '1'));
-      return; // stop here
+      return;
     }
 
-    // Otherwise, open it
+    // Open this dropdown
     menu.style.display = 'flex';
     arrow.style.transform = 'rotate(180deg)';
-
-    // Set opacity: active = 1, others = 0.75
-    dropdownsBtns.forEach((b) => {
-      b.style.opacity = b === btn ? '1' : '0.75';
-    });
+    dropdownsBtns.forEach((b) => (b.style.opacity = b === btn ? '1' : '0.75'));
   });
 });
 
-// Close all dropdowns and reset when clicking outside
+// Close all dropdowns when clicking outside
 window.addEventListener('click', (e) => {
   if (![...dropdownsBtns].some((btn) => btn.contains(e.target))) {
     document.querySelectorAll('.dropdown-content').forEach((d) => {
