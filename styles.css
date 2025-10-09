@@ -138,9 +138,20 @@ html {
     color: var(--red500);
 }
 
+.btn-primary:hover {
+    background-color: var(--red400);
+    color: var(--white);
+    border: 1px solid var(--red400);
+}
+
 .btn-secondary {
     background-color: transparent;
     color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--red400);
 }
 
 #header-container {
@@ -150,7 +161,7 @@ html {
     background-size: 225%;
     background-position: 27.5% 50%;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 1440px;
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -201,7 +212,6 @@ html {
     background-color: transparent;
 }
 
-/* TODO: dropdown menus */
 .dropdown-content {
     display: none;
     flex-direction: column;
