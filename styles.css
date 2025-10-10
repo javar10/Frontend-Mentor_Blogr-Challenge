@@ -522,6 +522,38 @@ html {
         display: block;
     }
 
+    #mid-section-container {
+        height: 636px;
+        position: relative;
+        top: var(--spacing-700);
+    }
+
+    #mid-section-bg {
+        height: 463px;
+        background-size: 70%, cover;
+        background-position: 50% 200%;
+        transform: translateY(100px);
+    }
+    
+    #mid-section-content {
+        width: 90vw;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #mid-section-phones-img {
+        width: 43vw;
+    }
+
+    #mid-section-text-container {
+        width: 63vw;
+    }
+    
+    #bottom-section-container {
+        position: static;
+        top: auto;
+    }
+
 }
 
 /* Phone */
