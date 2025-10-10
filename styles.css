@@ -584,9 +584,23 @@ html {
 
     #footer-container {
         position: static;
+        margin-top: var(--spacing-900);
+    }
+    
+    #footer-content {
+        width: 90%;
+    }
+    
+    .footer-list-container {
+        width: 19vw;
+    }
+    
+    #attribution {
+        position: relative;
+        bottom: -25px;
     }
 }
-
+ 
 /* Phone */
 /* @media (max-width: 500px) { */
 /* header {
