@@ -14,7 +14,6 @@ menuBtn.addEventListener('click', (e) => {
   if (!isOpen) {
     menu.style.display = 'flex';
     logOnBtns.style.display = 'flex';
-    // logOnBtns.style.flexDirection = 'column';
     menuBtn.src = 'images/icon-close.svg';
   }
   else {
@@ -36,7 +35,6 @@ dropdownsBtns.forEach((btn) => {
     const arrow = btn.querySelector('img');
     const isOpen = menu.style.display === 'flex';
 
-    // Close all other dropdowns and reset arrows + opacity
     document.querySelectorAll('.dropdown-content').forEach((d) => {
       if (d !== menu) {
         d.style.display = 'none';
@@ -45,7 +43,6 @@ dropdownsBtns.forEach((btn) => {
       }
     });
 
-    // If this dropdown was open, close it and reset opacity
     if (isOpen) {
       menu.style.display = 'none';
       arrow.style.transform = 'rotate(0deg)';
@@ -53,14 +50,12 @@ dropdownsBtns.forEach((btn) => {
       return;
     }
 
-    // Open this dropdown
     menu.style.display = 'flex';
     arrow.style.transform = 'rotate(180deg)';
     dropdownsBtns.forEach((b) => (b.style.opacity = b === btn ? '1' : '0.75'));
   });
 });
 
-// Close all dropdowns when clicking outside
 window.addEventListener('click', (e) => {
   if (![...dropdownsBtns].some((btn) => btn.contains(e.target))) {
     document.querySelectorAll('.dropdown-content').forEach((d) => {
@@ -80,7 +75,6 @@ primaryBtns.forEach((btn) => {
     const arrow = btn.querySelector('img');
     const isOpen = menu.style.display === 'flex';
 
-    // Close all other dropdowns and reset arrows + opacity
     document.querySelectorAll('.dropdown-content').forEach((d) => {
       if (d !== menu) {
         d.style.display = 'none';
@@ -89,7 +83,6 @@ primaryBtns.forEach((btn) => {
       }
     });
 
-    // If this dropdown was open, close it and reset opacity
     if (isOpen) {
       menu.style.display = 'none';
       arrow.style.transform = 'rotate(0deg)';
@@ -97,7 +90,6 @@ primaryBtns.forEach((btn) => {
       return;
     }
 
-    // Open this dropdown
     menu.style.display = 'flex';
     arrow.style.transform = 'rotate(180deg)';
     dropdownsBtns.forEach((b) => (b.style.opacity = b === btn ? '1' : '0.75'));
