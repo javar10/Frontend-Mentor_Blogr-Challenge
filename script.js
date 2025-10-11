@@ -1,6 +1,32 @@
 const dropdownsBtns = document.querySelectorAll('.dropbtn');
 const primaryBtns = document.querySelectorAll('.btn-primary');
 
+const menuBtn = document.getElementById('header-menu-icon');
+
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+
+  const isOpen = menuBtn.src.includes('icon-close.svg');
+  const menu = document.getElementById('dropdown-div');
+  const arrows = document.querySelectorAll('.dropdown-arrow-closed');
+  const logOnBtns = document.getElementById('header-top-right');
+
+  if (!isOpen) {
+    menu.style.display = 'flex';
+    logOnBtns.style.display = 'flex';
+    menuBtn.src = 'images/icon-close.svg';
+  }
+  else {
+    menu.style.display = 'none';
+    logOnBtns.style.display = 'none';
+    menuBtn.src = 'images/icon-hamburger.svg';
+  }
+
+  arrows.forEach(arrow => {
+    arrow.src = 'images/icon-arrow-dark.svg';
+  });
+})
+
 dropdownsBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
