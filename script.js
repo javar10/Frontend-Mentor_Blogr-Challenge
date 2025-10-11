@@ -14,6 +14,7 @@ menuBtn.addEventListener('click', (e) => {
   if (!isOpen) {
     menu.style.display = 'flex';
     logOnBtns.style.display = 'flex';
+    // logOnBtns.style.flexDirection = 'column';
     menuBtn.src = 'images/icon-close.svg';
   }
   else {
